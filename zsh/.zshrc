@@ -2,6 +2,13 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
+autoload -U promptinit; promptinit
+export PURE_PROMPT_SYMBOL=λ
+prompt pure
+zstyle :prompt:pure:prompt:success color 202
+
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
