@@ -1,6 +1,6 @@
 [window]
 dimensions = { columns = 200, lines = 50 }
-opacity = 0.6
+opacity = 0.75
 blur = true
 [font]
 size = 12
