@@ -1,6 +1,11 @@
+import = [
+"~/.dotfiles/alacritty/themes/alabaster_dark.toml"
+]
+
 [window]
 dimensions = { columns = 200, lines = 50 }
 opacity = 0.75
 blur = true
+
 [font]
 size = 12
