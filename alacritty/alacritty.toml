@@ -8,4 +8,5 @@ opacity = 0.75
 blur = true
 
 [font]
+normal = { family = "FiraCode Nerd Font" }
 size = 12
