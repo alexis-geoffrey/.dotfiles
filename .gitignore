@@ -5,3 +5,6 @@ zsh/.zcompdump
 zsh/.zcompcache
 
 .nvm/
+
+# alacritty
+alacritty/themes
