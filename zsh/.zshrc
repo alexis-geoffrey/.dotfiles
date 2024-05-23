@@ -1,5 +1,6 @@
 typeset -U PATH
 
+fpath+=("$HOME/.docker/completions")
 fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
 fpath+=("$HOMEBREW_PREFIX/share/zsh-completions")
 

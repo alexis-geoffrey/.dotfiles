@@ -1,3 +1,4 @@
 alias ls='ls -A --color'
 alias ll='ls -lA --color'
 alias sm='cd $HOME/dev/salesmarker'
+alias glg='git log --oneline --graph'
