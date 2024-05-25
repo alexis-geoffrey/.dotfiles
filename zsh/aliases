@@ -6,6 +6,8 @@ alias sm='cd $HOME/dev/salesmarker'
 # git
 alias gs='git status'
 alias ga='git add'
+alias gc='git commit'
+alias gpl='git pull'
 alias gp='git push'
 alias gl='git log'
 alias glg='git log --oneline --graph'
