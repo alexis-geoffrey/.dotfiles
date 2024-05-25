@@ -33,6 +33,11 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # custom scripts
 source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/vcs"
+
+# prompt
+NEWLINE=$'\n'
+PS1='%F{blue}%~%f ${vcs_info_msg_0_}${NEWLINE}%0(?.%202F.%202K)λ%k%f '
 
 # init bloat
 source "$ZDOTDIR/lazynvm"
