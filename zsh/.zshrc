@@ -1,5 +1,9 @@
 typeset -U PATH
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+path+=($HOME/go/bin)
+path+=($HOMEBREW_PREFIX/opt/mysql-client/bin)
+
 fpath+=("$HOME/.docker/completions")
 fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
 fpath+=("$HOMEBREW_PREFIX/share/zsh-completions")
@@ -31,16 +35,21 @@ setopt globdots
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# kube ps1
+source "$HOMEBREW_PREFIX/opt/kube-ps1/share/kube-ps1.sh"
+
 # custom scripts
 source "$ZDOTDIR/aliases"
 source "$ZDOTDIR/vcs"
 
 # prompt
 NEWLINE=$'\n'
-PS1='%F{blue}%~%f ${vcs_info_msg_0_}${NEWLINE}%0(?.%202F.%202K)λ%k%f '
+PS1='%F{blue}%~%f ${vcs_info_msg_0_}$(kube_ps1)${NEWLINE}%0(?.%202F.%202K)λ%k%f '
 
 # init bloat
-source "$ZDOTDIR/lazynvm"
+export NVM_DIR="$XDG_CONFIG_HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
