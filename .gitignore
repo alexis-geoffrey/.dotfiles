@@ -4,8 +4,6 @@ zsh/.zsh_sessions/
 zsh/.zcompdump
 zsh/.zcompcache
 
-.nvm/
-
 # alacritty
 alacritty/themes
 
